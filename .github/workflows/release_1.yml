@@ -12,5 +12,5 @@ jobs:
     runs-on: "ubuntu-latest"
     steps:
       - name: 'Release Phase 1: ascenda_go/nexus'
-        working-directory: ./app
+        working-directory: ./
         run: echo 'first'

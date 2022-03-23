@@ -13,5 +13,5 @@ jobs:
     runs-on: "ubuntu-latest"
     steps:
       - name: 'Release Phase 3: anz/vma'
-        working-directory: ./app
+        working-directory: ./
         run: echo 'third'

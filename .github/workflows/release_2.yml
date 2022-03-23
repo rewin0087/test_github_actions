@@ -13,5 +13,5 @@ jobs:
     runs-on: "ubuntu-latest"
     steps:
       - name: 'Release Phase 2: westpac/fab/hyundai'
-        working-directory: ./app
+        working-directory: ./
         run: echo 'second'
