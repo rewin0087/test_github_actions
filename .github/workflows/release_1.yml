@@ -5,8 +5,8 @@ on:
   #   workflows: ["Release Phase 2"]
   #   types:
   #     - completed
-  schedule:
-    - cron: '* * * * *'
+  # schedule:
+  #   - cron: '* * * * *'
 
 jobs:
   build:
