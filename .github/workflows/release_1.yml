@@ -2,7 +2,7 @@ name: "Release Phase 1"
 
 on:
   schedule:
-    - cron: '* * * * *'
+    - cron: '*/3 * * * *'
   push:
     branches:
       - master
