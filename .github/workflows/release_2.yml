@@ -5,8 +5,8 @@ on:
     workflows: ["Release Phase 1"]
     types:
       - completed
-  # schedule:
-  #   - cron: '0 0 * * TUE'
+  schedule:
+    - cron: '* * * * *'
 
 jobs:
   build:
