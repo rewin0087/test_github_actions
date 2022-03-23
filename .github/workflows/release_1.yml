@@ -1,8 +1,11 @@
 name: "Release Phase 1"
 
 on:
-  schedule:
-    - cron: '0 0 * * MON'
+  # schedule:
+  #   - cron: '0 0 * * MON'
+  push:
+    branches:
+      - main
 
 jobs:
   build:
