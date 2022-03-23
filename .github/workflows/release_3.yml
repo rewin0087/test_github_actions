@@ -1,0 +1,17 @@
+name: "Release Phase 3"
+
+on:
+  workflow_run:
+    workflows: ["Release Phase 2"]
+    types:
+      - completed
+  # schedule:
+  #   - cron: '0 0 * * FRI'
+
+jobs:
+  build:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: 'Release Phase 3: anz/vma'
+        working-directory: ./app
+        run: echo 'third'

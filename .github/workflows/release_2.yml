@@ -1,0 +1,17 @@
+name: "Release Phase 2"
+
+on:
+  workflow_run:
+    workflows: ["Release Phase 1"]
+    types:
+      - completed
+  # schedule:
+  #   - cron: '0 0 * * TUE'
+
+jobs:
+  build:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: 'Release Phase 2: westpac/fab/hyundai'
+        working-directory: ./app
+        run: echo 'second'

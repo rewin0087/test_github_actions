@@ -1,0 +1,13 @@
+name: "Release Phase 1"
+
+on:
+  schedule:
+    - cron: '0 0 * * MON'
+
+jobs:
+  build:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: 'Release Phase 1: ascenda_go/nexus'
+        working-directory: ./app
+        run: echo 'first'
