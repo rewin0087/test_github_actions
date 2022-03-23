@@ -3,9 +3,6 @@ name: "Release Phase 1"
 on:
   schedule:
     - cron: '*/3 * * * *'
-  push:
-    branches:
-      - master
 
 jobs:
   build:
