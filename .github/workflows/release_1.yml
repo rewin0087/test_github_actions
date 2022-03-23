@@ -1,6 +1,10 @@
 name: "Release Phase 1"
 
 on:
+  workflow_run:
+    workflows: ["Release Phase 2"]
+    types:
+      - completed
   schedule:
     - cron: '*/3 * * * *'
 

@@ -2,7 +2,7 @@ name: "Release Phase 2"
 
 on:
   workflow_run:
-    workflows: ["Release Phase 1"]
+    workflows: ["Release Phase 3"]
     types:
       - completed
   schedule:
