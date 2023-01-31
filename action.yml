@@ -1,0 +1,21 @@
+name: "Github Release"
+author: "Erwin Seribo"
+branding:
+  icon: "git-branch"
+  color: "gray-dark"
+description: "Publish Github releases from an action"
+
+inputs:
+  release_args:
+    required: true
+    type: string
+
+runs:
+  steps:
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+    - name: Release
+      run: console.log('action from test')
+      env:
+        GITHUB_TOKEN: ${{ secrets.workflow_token }}
