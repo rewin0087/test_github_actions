@@ -7,11 +7,16 @@ on:
   #     - completed
   # schedule:
   #   - cron: '* * * * *'
+  push
 
 jobs:
   build:
     runs-on: "ubuntu-latest"
     steps:
-      - name: 'Release Phase 3: anz/vma'
+      - name: Test
         working-directory: ./
         run: echo 'third'
+      - uses: Kaligo/release-action@main
+        with:
+          release_args: -h 0
+          app: Test
