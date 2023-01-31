@@ -18,5 +18,3 @@ runs:
     - name: Release
       run: echo 'testing from action'
       shell: bash
-      env:
-        GITHUB_TOKEN: ${{ secrets.workflow_token }}
