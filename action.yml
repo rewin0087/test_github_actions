@@ -11,11 +11,10 @@ inputs:
     type: string
 
 runs:
-  using: 'node16'
+  using: 'composite'
   steps:
     - uses: actions/setup-node@v3
       with:
         node-version: 16
     - name: Release
       run: node $GITHUB_ACTION_PATH/index.js
-      shell: bash
