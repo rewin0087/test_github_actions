@@ -18,3 +18,4 @@ runs:
         node-version: 16
     - name: Release
       run: node $GITHUB_ACTION_PATH/index.js
+      shell: node
