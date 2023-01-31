@@ -17,6 +17,3 @@ jobs:
         working-directory: ./
         run: echo 'third'
       - uses: rewin0087/test_github_actions@master
-        with:
-          release_args: -h 0
-          app: Test
