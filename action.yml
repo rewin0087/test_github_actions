@@ -16,6 +16,7 @@ runs:
       with:
         node-version: 16
     - name: Release
-      run: console.log('action from test')
+      run: echo 'testing from action'
+      shell: bash
       env:
         GITHUB_TOKEN: ${{ secrets.workflow_token }}
