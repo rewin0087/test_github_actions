@@ -31,6 +31,7 @@ runs:
           ${{ runner.os }}-
     - name: Install dependencies
       run: cd $GITHUB_ACTION_PATH && npm install
+      shell: bash
     - name: Release
       run: node $GITHUB_ACTION_PATH/index.js -t testing --hello hello
       shell: bash
