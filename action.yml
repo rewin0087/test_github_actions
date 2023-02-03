@@ -17,5 +17,5 @@ runs:
       with:
         node-version: 16
     - name: Release
-      run: node $GITHUB_ACTION_PATH/index.js -test testing --hello hello
+      run: node $GITHUB_ACTION_PATH/index.js -t testing --hello hello
       shell: bash

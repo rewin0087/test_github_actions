@@ -3,4 +3,6 @@ const args = require('yargs').argv;
 
 console.log(args);
 
-exec(`echo 'test'`)
+exec(`echo 'test'`, (e,s,d) => {
+  console.log(s)
+});
