@@ -1,5 +1,5 @@
-const { exec } = require("child_process");
-const args = require('yargs').argv;
+import { exec } from 'child_process';
+import yargs from 'yargs';
 
 console.log(args);
 
