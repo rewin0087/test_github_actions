@@ -18,7 +18,7 @@ runs:
         node-version: 16
     - name: Install Dependencies
       run: npm install
-      shelle: bash
+      shell: bash
       working-directory: ./
     - name: Release
       run: node $GITHUB_ACTION_PATH/index.js
