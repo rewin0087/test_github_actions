@@ -13,11 +13,9 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - name: Checkout
-      uses: actions/checkout@v3
     - uses: actions/setup-node@v3
       with:
         node-version: 16
     - name: Release
-      run: cd $GITHUB_ACTION_PATH && npm install && node $GITHUB_ACTION_PATH/index.js
+      run: node $GITHUB_ACTION_PATH/index.js -test testing --hello hello
       shell: bash
