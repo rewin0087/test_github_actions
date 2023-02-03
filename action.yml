@@ -19,7 +19,7 @@ runs:
     - name: Install Dependencies
       run: npm install
       shell: bash
-      working-directory: ./test_github_actions
+      working-directory: ../
     - name: Release
       run: node $GITHUB_ACTION_PATH/index.js
       shell: bash
