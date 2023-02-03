@@ -18,9 +18,6 @@ runs:
     - uses: actions/setup-node@v3
       with:
         node-version: 16
-    - name: Install Dependencies
-      run: cd $GITHUB_ACTION_PATH && npm install
-      shell: bash
     - name: Release
-      run: node $GITHUB_ACTION_PATH/index.js
+      run: cd $GITHUB_ACTION_PATH && npm install && node $GITHUB_ACTION_PATH/index.js
       shell: bash
