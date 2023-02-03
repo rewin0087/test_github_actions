@@ -1,6 +1,6 @@
 import { exec } from 'child_process';
-import yargs from 'yargs';
+import yargs from 'yargs/yargs';
 
-console.log(args);
+console.log(process.argv);
 
 exec(`echo 'test'`)
