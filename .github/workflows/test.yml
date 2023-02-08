@@ -1,0 +1,21 @@
+name: "Release Phase test"
+
+on:
+  workflow_call:
+    inputs:
+      release_args:
+        required: true
+        type: string
+    secrets:
+      workflow_token:
+        required: true
+
+jobs:
+  build:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: 'Release Phase 2: westpac/fab/hyundai'
+        working-directory: ./
+        run: |
+          echo ${{ secrets.workflow_token }}
+          echo ${{ inputs.release_args }}

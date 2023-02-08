@@ -16,6 +16,7 @@ jobs:
       - name: Test
         working-directory: ./
         run: echo 'third'
-      - uses: rewin0087/test_github_actions@master
+      - uses: rewin0087/test_github_actions/.github/workflows/test.yml@master
         with:
           release_args: -h 0
+        secrets: inherit
