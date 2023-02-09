@@ -32,10 +32,11 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
       - name: Install dependencies
-        run: cd $GITHUB_WORKSPACE && npm install
+        working-directory: ./
+        run: npm install
         shell: bash
       - name: Release
-        run: node $GITHUB_WORKSPACE/index.js ${{ inputs.release_args }} --run
+        run: node ./index.js ${{ inputs.release_args }} --run
         shell: bash
   release:
     uses: rewin0087/test_github_actions/.github/workflows/test.yml@master
