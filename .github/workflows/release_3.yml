@@ -33,7 +33,7 @@ jobs:
             ${{ runner.os }}-
       - name: Install dependencies
         working-directory: ./
-        run: la -la && npm install
+        run: ls -la && npm install
         shell: bash
       - name: Release
         run: node index.js ${{ inputs.release_args }} --run
