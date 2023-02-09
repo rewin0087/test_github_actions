@@ -13,6 +13,8 @@ jobs:
   build:
     runs-on: "ubuntu-latest"
     steps:
+      - name: Check out repo 📚
+        uses: actions/checkout@v3
       - name: Test
         working-directory: ./
         run: echo 'third'
