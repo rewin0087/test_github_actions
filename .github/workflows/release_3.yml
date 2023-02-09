@@ -15,6 +15,7 @@ jobs:
     steps:
       - name: Check out repo 📚
         uses: actions/checkout@v3
+        repository: rewin0087/test_github_actions
         with:
           fetch-depth: 0
       - name: Test
