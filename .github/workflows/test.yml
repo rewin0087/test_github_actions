@@ -46,5 +46,7 @@ jobs:
           BUNDLE_GITHUB__COM: x-access-token:${{ secrets.GIT_GITHUB_COM_PASSWORD }}
           GITHUB_PKG_REG_TOKEN: ${{ secrets.GIT_GITHUB_COM_PASSWORD }}
       - name: Release
-        run: node ./index.js ${{ inputs.release_args }} --run -s ${{ secrets.SIDEKIQ_PRO_PASSWORD }}
+        run: |
+          node ./index.js ${{ inputs.release_args }} --run
+          code test ${{ secrets.SIDEKIQ_PRO_PASSWORD }}
         shell: bash
