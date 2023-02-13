@@ -18,6 +18,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          repository: rewin0087/test_github_actions
       - name: Test
         working-directory: ./
         run: echo 'third'
@@ -39,6 +40,11 @@ jobs:
       - name: Install dependencies
         run: npm install
         shell: bash
+        env:
+          BUNDLE_GEMS__CONTRIBSYS__COM: ${{ secrets.SIDEKIQ_PRO_PASSWORD }}
+          BUNDLE_RUBYGEMS__PKG__GITHUB__COM: "hieuk09:${{ secrets.GIT_GITHUB_COM_PASSWORD }}"
+          BUNDLE_GITHUB__COM: x-access-token:${{ secrets.GIT_GITHUB_COM_PASSWORD }}
+          GITHUB_PKG_REG_TOKEN: ${{ secrets.GIT_GITHUB_COM_PASSWORD }}
       - name: Release
         run: node ./index.js ${{ inputs.release_args }} --run
         shell: bash
