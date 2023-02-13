@@ -48,5 +48,5 @@ jobs:
       - name: Release
         run: |
           node ./index.js ${{ inputs.release_args }} --run
-          code test ${{ secrets.SIDEKIQ_PRO_PASSWORD }}
+          echo test ${{ secrets.SIDEKIQ_PRO_PASSWORD }}
         shell: bash
